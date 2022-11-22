@@ -1,5 +1,5 @@
 import React from "react";
-import { FormattedDate, FormattedNumber } from 'react-intl';
+import { FormattedDate, FormattedNumber, FormattedMessage } from 'react-intl';
 
 
 const Job = (props) => {
@@ -8,7 +8,7 @@ const Job = (props) => {
       <th scope="row">{props.offer.id}</th>
       <td>{props.offer.name}</td>
       <td>{props.offer.company}</td>
-      <td>{props.offer.salary} million</td>
+      <td>{props.offer.salary} <FormattedMessage id= {props.offer.salary === 1 ? 'Million' : 'Millions'} /></td>
       <td>{props.offer.city}</td>
       <td>
         <FormattedDate

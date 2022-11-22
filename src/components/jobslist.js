@@ -3,7 +3,7 @@ import Job from "./job";
 import { FormattedMessage } from 'react-intl';
 
 
-const JobsList = () => {
+const JobsList = ({idioma}) => {
   const [offers] = useState([
     {
       id: "0001",
@@ -37,7 +37,7 @@ const JobsList = () => {
   return (
     <div>
       <table className="table">
-        <thead className="thead-dark">
+        <thead className={idioma === 'en-EN' ? 'table-dark' : 'thead.light'}>
           <tr>
             <th scope="col">#</th>
             <th scope="col">

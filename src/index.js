@@ -25,7 +25,7 @@ const languageL = () => {
 
 ReactDOM.render(
     <IntlProvider locale= {language()} messages={languageL()}>
-        <JobsList />
+        <JobsList idioma = {language()}/>
     </IntlProvider>, document.getElementById("root")
 );
 
