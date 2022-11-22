@@ -7,11 +7,7 @@ import localeEsMessages from "./locales/es";
 import localeEnMessages from "./locales/en";
 
 
-var usrlang = navigator.language
-    || navigator.userLanguage;
-console.log(
-    "User's preferred language is: "
-    + usrlang);
+var usrlang = navigator.language;
 
 const language = () => {
     if (usrlang == "es") return 'es-ES';
